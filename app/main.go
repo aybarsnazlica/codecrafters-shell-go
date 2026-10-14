@@ -14,6 +14,9 @@ func main() {
 		command = strings.TrimSpace(command)
 		if command == "exit" {
 			break
+		} else if strings.HasPrefix(command, "echo ") {
+			fmt.Println(command[5:])
+			continue
 		}
 		
 		fmt.Printf("%s: command not found\n", command)
