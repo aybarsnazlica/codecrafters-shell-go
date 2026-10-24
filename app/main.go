@@ -18,7 +18,9 @@ func main() {
 
 		if command == "exit" {
 			break
-		} else if strings.HasPrefix(command, "type") {
+		}
+		
+		if strings.HasPrefix(command, "type") {
 			content := strings.SplitN(command, " ", 2)[1]
 			if slices.Contains(builtins, content) {
 				fmt.Printf("%s is a shell builtin\n", content)
