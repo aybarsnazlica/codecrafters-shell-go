@@ -29,5 +29,7 @@ func main() {
 			fmt.Println(command[5:])
 			continue
 		}
+
+		fmt.Printf("%s: command not found\n", command)
 	}
 }
