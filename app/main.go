@@ -24,7 +24,7 @@ func main() {
 				fmt.Printf("%s is a shell builtin\n", content)
 				continue
 			}
-			fmt.Printf("%s: command not found\n", content)
+			fmt.Printf("%s: not found\n", content)
 		} else if strings.HasPrefix(command, "echo ") {
 			fmt.Println(command[5:])
 			continue
