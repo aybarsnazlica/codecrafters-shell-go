@@ -28,8 +28,8 @@ func main() {
 		} else if strings.HasPrefix(command, "echo ") {
 			fmt.Println(command[5:])
 			continue
+		} else {
+			fmt.Printf("%s: command not found\n", command)
 		}
-
-		fmt.Printf("%s: command not found\n", command)
 	}
 }
