@@ -20,6 +20,10 @@ func executeBuiltin(fields []string) error {
 	case "exit":
 		os.Exit(0)
 	case "type":
+		if len(fields) < 2 {
+			return fmt.Errorf("type: missing argument")
+		}
+
 		if isBuiltin(fields[1]) {
 			fmt.Printf("%s is a shell builtin\n", fields[1])
 		} else if path, err := exec.LookPath(fields[1]); err == nil {
